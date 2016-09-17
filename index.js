@@ -13,10 +13,19 @@ module.exports = function handler(message) {
     client.get('statuses/user_timeline',
                {screen_name: 'txase'},
                (err, tweets) => {
-      if (err)
+      if (err) {
         reject(err)
-      else
-        resolve({body: tweets})
+        return
+      }
+
+      let response = {
+            headers: {
+              'Access-Control-Allow-Origin': '*'
+            },
+            body: tweets
+          }
+
+      resolve(response)
     })  
   })  
 }
