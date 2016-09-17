@@ -14,9 +14,9 @@ module.exports = function handler(message) {
                {screen_name: 'txase'},
                (err, tweets) => {
       if (err)
-        resolve(err)
+        reject(err)
       else
-        reject({body: tweets})
+        resolve({body: tweets})
     })  
   })  
 }
