@@ -3,6 +3,9 @@ const fs = require('fs'),
 
 module.exports = function(message) {
   return {
+    headers: {
+      'Content-Type': 'text/html'
+    },
     body: html
   }
 }
