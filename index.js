@@ -11,7 +11,7 @@ const Twitter = require('twitter'),
 module.exports = function handler(message) {
   return new Promise((resolve, reject) => {
     client.get('statuses/user_timeline',
-               {screen_name: 'txase'},
+               {screen_name: message.resourceParams.handle},
                (err, tweets) => {
       if (err) {
         reject(err)
