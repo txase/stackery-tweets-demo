@@ -6,7 +6,7 @@ function handler(message, output) {
     }
   }
 
-  return output(request, {waitForResponses: true})
+  return output(request)
     .then((responses) => {
       return {
         headers: {
