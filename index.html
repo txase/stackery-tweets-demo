@@ -55,10 +55,6 @@
             <div class="well">
               <form>
                 <div class="form-group">
-                  <label for="apiUrl">Stackery Api Url</label>
-                  <input id="apiUrl" class="form-control" type="text" ng-model="apiUrl">
-                </div>
-                <div class="form-group">
                   <label for="handle">Twitter Handle</label>
                   <input id="handle" class="form-control" type="text" ng-model="handle">
                 </div>
@@ -80,7 +76,7 @@
 
       app.controller('Controller', function Controller($scope, $http, $timeout) {
         $scope.fetch = function() {
-          let url = $scope.apiUrl + '/tweets/' + encodeURIComponent($scope.handle)
+          let url = window.location + '/tweets/' + encodeURIComponent($scope.handle)
 
           $scope.tweets = []
 
