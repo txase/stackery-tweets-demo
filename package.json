@@ -4,9 +4,7 @@
   "main": "index.js",
   "author": "Stackery",
   "license": "MIT",
-  "dependencies": {
-    "twitter": "^1.4.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "request": "^2.74.0"
   }
